@@ -1,6 +1,5 @@
 import random
 
-
 def main():
     numbers = "1234567890"
     upper_case_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
