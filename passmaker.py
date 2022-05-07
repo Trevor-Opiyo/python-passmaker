@@ -1,33 +1,5 @@
 import random
 
-
-def main():
-    numbers = "1234567890"
-    upper_case_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lower_case_letters = "abcdefghijklmnopqrstuvwxyz"
-    special_characters = "!@#$%^*()_-+={[}]|?><"
-    possible_chars = ""
-    pass_length = 0
-
-    print("--------------------------------\n       Password Generator\n--------------------------------")
-    possible_chars = input_entry("numbers", numbers, possible_chars)
-    possible_chars = input_entry(
-        "upper-case letters",
-        upper_case_letters,
-        possible_chars)
-    possible_chars = input_entry(
-        "lower-case letters",
-        lower_case_letters,
-        possible_chars)
-    possible_chars = input_entry(
-        "special characters",
-        special_characters,
-        possible_chars)
-    pass_length = assign_length()
-    pass_return(pass_length, possible_chars)
-    pass_regenerate(pass_length, possible_chars)
-
-
 def input_entry(name, values, possible_chars):
     while True:
         response = input("Include " + name + "? [Y/N]\n")
@@ -78,5 +50,28 @@ def pass_regenerate(pass_length, possible_chars):
                                 response == "No"):
             print("Please enter valid input.")
 
+if __name__ == "__main__":
+    numbers = "1234567890"
+    upper_case_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lower_case_letters = "abcdefghijklmnopqrstuvwxyz"
+    special_characters = "!@#$%^*()_-+={[}]|?><"
+    possible_chars = ""
+    pass_length = 0
 
-main()
+    print("--------------------------------\n       Password Generator\n--------------------------------")
+    possible_chars = input_entry("numbers", numbers, possible_chars)
+    possible_chars = input_entry(
+        "upper-case letters",
+        upper_case_letters,
+        possible_chars)
+    possible_chars = input_entry(
+        "lower-case letters",
+        lower_case_letters,
+        possible_chars)
+    possible_chars = input_entry(
+        "special characters",
+        special_characters,
+        possible_chars)
+    pass_length = assign_length()
+    pass_return(pass_length, possible_chars)
+    pass_regenerate(pass_length, possible_chars)
