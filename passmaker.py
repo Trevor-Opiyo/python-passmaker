@@ -10,20 +10,20 @@ def input_entry(name, values, possible_chars):
         if (response == "N") or (response == "n") or (
                 response == "no") or (response == "No"):
             return possible_chars
-        print("Please enter valid input.")
+        print("\nPlease enter valid input.\n")
 
 
 def assign_length():
     while True:
         try:
-            pass_length = int(input("Total number of characters? [integer]\n"))
+            pass_length = int(input("\nTotal number of characters? [integer]\n"))
             return pass_length
         except ValueError:
-            print("Please enter valid input.")
+            print("\nPlease enter valid input.\n")
 
 
 def pass_return(pass_length, possible_chars):
-    print("Your password is: ")
+    print("\nYour password is: \n")
     while pass_length > 0:
         print(random.choice(possible_chars), end='')
         pass_length -= 1
@@ -48,7 +48,7 @@ def pass_regenerate(pass_length, possible_chars):
                         response == "Yes") and (
                             response == "no") and (
                                 response == "No"):
-            print("Please enter valid input.")
+            print("\nPlease enter valid input.\n")
 
 if __name__ == "__main__":
     numbers = "1234567890"
