@@ -1,5 +1,6 @@
 import random
 
+
 def input_entry(name, values, possible_chars):
     while True:
         response = input("Include " + name + "? [Y/N]\n")
@@ -16,7 +17,8 @@ def input_entry(name, values, possible_chars):
 def assign_length():
     while True:
         try:
-            pass_length = int(input("\nTotal number of characters? [integer]\n"))
+            pass_length = int(
+                input("\nTotal number of characters? [integer]\n"))
             return pass_length
         except ValueError:
             print("\nPlease enter valid input.\n")
@@ -49,6 +51,7 @@ def pass_regenerate(pass_length, possible_chars):
                             response == "no") and (
                                 response == "No"):
             print("\nPlease enter valid input.\n")
+
 
 if __name__ == "__main__":
     numbers = "1234567890"
